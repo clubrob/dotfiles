@@ -15,6 +15,10 @@ source z.sh
 
 DEFAULT_USER=$(whoami)
 
+HISTSIZE=5000
+HISTFILESIZE=10000
+
+alias up='sudo apt update && sudo apt dist-upgrade -y'
 alias vz='vim ~/.zshrc'
 alias src='source ~/.zshrc'
 alias dev='cd /mnt/c/Users/rclin/dev-local'
