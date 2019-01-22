@@ -35,4 +35,7 @@ alias npmu="npx npm-check -u"
 alias npmug="npx npm-check -ug"
 alias npmlg='npm list -g --depth=0'
 
+# Custom functions
+mdcd () { mkdir "$@" && cd "$@" || exit; }
+
 PATH=$PATH:~/.npm-global/bin
