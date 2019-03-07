@@ -21,13 +21,14 @@ HISTFILESIZE=10000
 alias up='sudo apt update && sudo apt dist-upgrade -y'
 alias vz='vim ~/.zshrc'
 alias src='source ~/.zshrc'
-alias dev='cd /mnt/c/Users/rclin/dev-local'
+alias dev='cd /mnt/c/Users/rclin/dev-linux'
 alias home='cd /mnt/c/Users/rclin'
 alias lll='ls -l |less'
 alias -g L='| less'
 alias -g G='| grep'
 alias druvm='ssh rlindsey@drupalizer'
 alias c='code .'
+alias killz='pkill zsh'
 
 # npm aliases
 alias crapp='npx create-react-app'
