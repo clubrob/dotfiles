@@ -1,24 +1,19 @@
 {
-  "extends": [
-    "prettier"
-  ],
-  "plugins": [
-    "prettier"
-  ],
+  "extends": ["airbnb", "prettier"],
+  "parser": "babel-eslint",
+  "plugins": ["html", "prettier"],
   "parserOptions": {
-    "ecmaVersion": 9,
+    "ecmaVersion": 2018,
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true,
-      "experimentalObjectRestSpread": true,
       "impliedStrict": true,
       "classes": true
     }
   },
   "env": {
-    "es6": true,
     "node": true,
-    "browser": true
+    "browser": true,
+    "jquery": true
   },
   "rules": {
     "prettier/prettier": [
