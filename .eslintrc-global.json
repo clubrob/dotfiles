@@ -1,5 +1,5 @@
 {
-  "extends": ["airbnb", "prettier"],
+  "extends": ["prettier"],
   "parser": "babel-eslint",
   "plugins": ["html", "prettier"],
   "parserOptions": {
@@ -16,6 +16,7 @@
     "jquery": true
   },
   "rules": {
+    "func-names": 0,
     "prettier/prettier": [
       "error",
       {
