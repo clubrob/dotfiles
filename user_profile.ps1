@@ -1,31 +1,25 @@
-# Use this file to run your own startup commands
+function Open-Npm-List-Global { npm.cmd list -g --depth=0 }
+function Open-Npm-Check-Update-Global { npx.cmd npm-check -ug }
+function Open-Npm-Check-Update { npx.cmd npm-check -u }
+function Open-Choco-Upgrade-All { choco.exe upgrade all -y }
+function Open-Dotnet-Scaffold { dotnet-aspnet-codegenerator.exe @Args }
+function Open-Ssh-Ubuntu-Vm { ssh.exe rlindsey@robuntu }
 
-## Prompt Customization
-<#
-.SYNTAX
-    <PrePrompt><CMDER DEFAULT>
-    λ <PostPrompt> <repl input>
-.EXAMPLE
-    <PrePrompt>N:\Documents\src\cmder [master]
-    λ <PostPrompt> |
-#>
+Set-Alias -Name npmlg -Value Open-Npm-List-Global
+Set-Alias -Name npmug -Value Open-Npm-Check-Update-Global
+Set-Alias -Name npmu -Value Open-Npm-Check-Update
+Set-Alias -Name chup -Value Open-Choco-Upgrade-All
+Set-Alias -Name dnac -Value Open-Dotnet-Scaffold
+Set-Alias -Name robvm -Value Open-Ssh-Ubuntu-Vm
 
-[ScriptBlock]$PrePrompt = {
-
+# Chocolatey profile
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+  Import-Module "$ChocolateyProfile"
 }
 
-# Replace the cmder prompt entirely with this.
-# [ScriptBlock]$CmderPrompt = {}
-
-[ScriptBlock]$PostPrompt = {
-
-}
-
-## <Continue to add your own>
-function Npm-List-Global {npm list -g --depth=0}
-function Npm-Check-Update {npx npm-check -ug}
-function Choco-Upgrade-All {choco upgrade all -y}
-
-Set-Alias -Name npmlg -Value Npm-List-Global
-Set-Alias -Name npmug -Value Npm-Check-Update
-Set-Alias -Name chup -Value Choco-Upgrade-All
+Import-Module PSConsoleTheme
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-ConsoleTheme 'Classic Dark'
+Set-Theme Avit

@@ -39,4 +39,5 @@ alias npmlg='npm list -g --depth=0'
 # Custom functions
 mdcd () { mkdir "$@" && cd "$@" || exit; }
 
+PATH=$(echo :$PATH: | sed -e 's,:/mnt/c/Program Files/nodejs:,:,g' -e 's/^://' -e 's/:$//')
 PATH=$PATH:~/.npm-global/bin
