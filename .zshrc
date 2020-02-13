@@ -8,10 +8,9 @@ antigen bundle vscode
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle z
 antigen theme avit
 antigen apply
-
-source /usr/local/bin/z/z.sh
 
 DEFAULT_USER=$(whoami)
 
