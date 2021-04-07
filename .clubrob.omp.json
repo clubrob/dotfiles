@@ -1,0 +1,118 @@
+// With Comments
+{
+	"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+	"blocks": [
+		{
+			"alignment": "left",
+			"segments": [
+				{
+					"background": "#1c0230",
+					"foreground": "#ffffff",
+					"leading_diamond": "",
+					"style": "diamond",
+					"trailing_diamond": "",
+					"type": "session",
+					"properties": {
+						"display_host": false
+					}
+				},
+				{
+					"background": "#751015",
+					"foreground": "#ffffff",
+					"powerline_symbol": "",
+					"properties": {
+						"prefix": "  ",
+						"style": "folder"
+					},
+					"style": "powerline",
+					"type": "path"
+				},
+				{
+					"background": "#161B22",
+					"foreground": "#f0f6fc",
+					"powerline_symbol": "",
+					"properties": {
+						"display_stash_count": true,
+						"display_upstream_icon": true
+					},
+					"style": "powerline",
+					"type": "git"
+				},
+				// {
+				// 	"background": "#f36943",
+				// 	"foreground": "#193549",
+				// 	"powerline_symbol": "",
+				// 	"properties": {
+				// 		"battery_icon": "",
+				// 		"charged_color": "#4caf50",
+				// 		"charging_color": "#40c4ff",
+				// 		"color_background": true,
+				// 		"discharging_color": "#ff5722",
+				// 		"postfix": " "
+				// 	},
+				// 	"style": "powerline",
+				// 	"type": "battery"
+				// },
+				{
+					"background": "#6CA35E",
+					"foreground": "#ffffff",
+					"powerline_symbol": "",
+					"properties": {
+						"prefix": "  "
+					},
+					"style": "powerline",
+					"type": "node"
+				},
+				// {
+				// 	"background": "#0077c2",
+				// 	"foreground": "#ffffff",
+				// 	"powerline_symbol": "",
+				// 	"properties": {
+				// 		"prefix": " ﲵ "
+				// 	},
+				// 	"style": "powerline",
+				// 	"type": "shell"
+				// },
+				{
+					"background": "#ffff66",
+					"foreground": "#193549",
+					"powerline_symbol": "",
+					"style": "powerline",
+					"type": "root"
+				},
+				{
+					"type": "spotify",
+					"style": "diamond",
+					"powerline_symbol": "\uE0B0",
+					"foreground": "#ffffff",
+					"background": "#1DB954",
+					"trailing_diamond": "",
+					"properties": {
+						"playing_icon": "\uE602 ",
+						"paused_icon": "\uF8E3 ",
+						"stopped_icon": "\uF04D ",
+						"track_separator": " - ",
+						"prefix": "<transparent></> \uF9C6 "
+					}
+				}
+				// {
+				// 	"background": "#2e9599",
+				// 	"foreground": "#ffffff",
+				// 	"leading_diamond": "",
+				// 	"properties": {
+				// 		"always_enabled": true,
+				// 		"color_background": true,
+				// 		"display_exit_code": false,
+				// 		"error_color": "#f1184c",
+				// 		"prefix": "<transparent></> "
+				// 	},
+				// 	"style": "diamond",
+				// 	"trailing_diamond": "",
+				// 	"type": "exit"
+				// }
+			],
+			"type": "prompt"
+		}
+	],
+	"final_space": true
+}
